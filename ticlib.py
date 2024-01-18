@@ -183,8 +183,8 @@ def negamax(board, depth, player, alpha, beta):
             i, j = move
             board[i][j] = '💀'
             eval_score = -negamax(board, depth - 1, "😡", -beta, -alpha)
-            os.system('cls||clear') #1111111111111111111111111111111111111111111111111111111111
-            disBoard(board) #11111111111111111111dd11111111111111111111111111111111111111111111
+            #os.system('cls||clear') #1111111111111111111111111111111111111111111111111111111111
+            #disBoard(board) #11111111111111111111dd11111111111111111111111111111111111111111111
             board[i][j] = '🌑'
             min_eval = min(min_eval, eval_score)
             beta = min(beta, eval_score)
@@ -198,8 +198,8 @@ def negamax(board, depth, player, alpha, beta):
             i, j = move
             board[i][j] = "😡"
             eval_score = -negamax(board, depth - 1, '💀', -beta, -alpha)
-            os.system('cls||clear') #111111111111111111111111#11111111111111111111dd11111111111
-            disBoard(board) #11111111111111111111dd11111111111111111111111111111111111111111111
+            #os.system('cls||clear') #111111111111111111111111#11111111111111111111dd11111111111
+            #disBoard(board) #11111111111111111111dd11111111111111111111111111111111111111111111
             board[i][j] = '🌑'
             max_eval = max(max_eval, eval_score)
             alpha = max(alpha, eval_score)
